@@ -47,6 +47,7 @@ public class App {
     private Instances loadData(String arffPath) {
         try {
             Instances data = new Instances(new BufferedReader(new FileReader(arffPath)));
+            data.deleteAttributeAt(0);
             data.setClassIndex(data.numAttributes() - 1);
             return data;
         } catch (FileNotFoundException e) {

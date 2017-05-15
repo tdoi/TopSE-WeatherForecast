@@ -23,6 +23,7 @@ public class ConvertToARFF {
     public static void main(String[] args) {
         ConvertToARFF app = new ConvertToARFF();
 
+//        String[] csvList = { "2001.csv" };
         String[] csvList = { "2001.csv", "2002.csv", "2003.csv", "2004.csv", "2005.csv",
                 "2006.csv", "2007.csv", "2008.csv", "2009.csv", "2010.csv",
                 "2011.csv", "2012.csv", "2013.csv", "2014.csv", "2015.csv",
@@ -114,14 +115,14 @@ public class ConvertToARFF {
         }
 
         Pattern p2 = Pattern.compile("曇.*");
-        Matcher m2 = p1.matcher(weather);
-        if (m1.find()) {
+        Matcher m2 = p2.matcher(weather);
+        if (m2.find()) {
             return "曇";
         }
 
         Pattern p3 = Pattern.compile("雨.*");
-        Matcher m3 = p1.matcher(weather);
-        if (m1.find()) {
+        Matcher m3 = p3.matcher(weather);
+        if (m3.find()) {
             return "雨";
         }
 
